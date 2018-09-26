@@ -49,6 +49,14 @@ def index(path):
     return render_template('invenio_app_ils/index.html')
 
 
+api_blueprint = Blueprint(
+    "invenio_app_ils",
+    __name__,
+    template_folder="templates",
+    static_folder="static",
+    url_prefix="",
+)
+
 def build_loan_request_blueprint(app, blueprint):
     """."""
     create_error_handlers(blueprint)
