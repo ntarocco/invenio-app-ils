@@ -414,3 +414,6 @@ CIRCULATION_LOAN_TRANSITIONS = {
     "ITEM_RETURNED": [],
     "CANCELLED": [],
 }
+
+RECORD_EDITOR_URL_PREFIX = '/editor'
+"""Default URL we want to serve our editor application, i.e /editor."""

@@ -16,6 +16,7 @@ from flask import current_app
 from werkzeug.utils import cached_property
 
 from invenio_records_rest.utils import allow_all
+from invenio_record_editor.views import create_editor_blueprint
 
 from . import config
 from .views import blueprint, build_loan_request_blueprint
@@ -34,6 +35,8 @@ class InvenioAppIls(object):
         self.init_config(app)
         _blueprint = build_loan_request_blueprint(app, blueprint)
         app.register_blueprint(_blueprint)
+        _editor_blueprint = create_editor_blueprint(app)
+        app.register_blueprint(_editor_blueprint)
         app.extensions['invenio-app-ils'] = self
 
     def init_config(self, app):
