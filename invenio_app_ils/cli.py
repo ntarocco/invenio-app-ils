@@ -756,17 +756,25 @@ class DocumentRequestGenerator(Generator):
 class LibraryGenerator(Generator):
     """Location Generator."""
 
+    def random_name(self):
+        """Generate random name."""
+        parts = lorem.sentence().split()
+        return " ".join(parts[:min(randint(1, 2), len(parts))])
+
     def generate(self):
         """Generate."""
-        size = self.holder.libraries["total"]
-        objs = [
-            {
+        size = self.holder.vendors["total"]
+        objs = []
+        for pid in range(1, size + 1):
+            obj = {
                 "pid": self.create_pid(),
-                "name": lorem.sentence(),
-                "notes": "{}".format(lorem.text()),
+                "name": self.random_name(),
+                "address": "CERN\n1211 Geneva 23\nSwitzerland",
+                "email": "visits.service@cern.ch",
+                "phone": "+41 (0) 22 76 776 76",
+                "notes": lorem.sentence(),
             }
-            for pid in range(1, size + 1)
-        ]
+            objs.append(obj)
 
         self.holder.libraries["objs"] = objs
 

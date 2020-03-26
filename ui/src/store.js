@@ -60,14 +60,18 @@ import {
   loanRequestFormReducer,
 } from '@pages/frontsite/Documents/DocumentsDetails/reducer';
 import { documentRequestDetailsReducer } from '@pages/backoffice/DocumentRequest/DocumentRequestDetails/reducer';
-import { libraryDetailsReducer } from '@pages/backoffice/ILL/LibraryDetails/reducer';
-import { borrowingRequestDetailsReducer } from '@pages/backoffice/ILL/BorrowingRequestDetails/reducer';
+import {
+  borrowingRequestDetailsReducer,
+  libraryDetailsReducer,
+} from '@pages/backoffice/ILL';
 import {
   patronCurrentDocumentRequestsReducer,
   patronPastDocumentRequestsReducer,
 } from '@pages/frontsite/PatronProfile/reducer';
-import { orderDetailsReducer } from '@pages/backoffice/Acquisition';
-import { vendorDetailsReducer } from '@pages/backoffice/Acquisition';
+import {
+  orderDetailsReducer,
+  vendorDetailsReducer,
+} from '@pages/backoffice/Acquisition';
 import { seriesDetailsFrontReducer } from '@pages/frontsite/Series/SeriesDetails/reducer';
 
 const rootReducer = combineReducers({

@@ -356,13 +356,13 @@ const searchConfig = {
     },
     sortOrder: ['asc', 'desc'],
   },
-  orders: {
+  acqQrders: {
     filters: [
       {
         title: 'Status',
         field: 'status',
         aggName: 'status',
-        labels: invenioConfig.orders.statuses,
+        labels: invenioConfig.acqQrders.statuses,
       },
       {
         title: 'Vendor',
@@ -423,7 +423,7 @@ const searchConfig = {
     },
     sortOrder: ['desc', 'asc'],
   },
-  vendors: {
+  acqVendors: {
     filters: [],
     sortBy: {
       onEmptyQuery: 'name',
@@ -444,7 +444,7 @@ const searchConfig = {
     },
     sortOrder: ['asc', 'desc'],
   },
-  libraries: {
+  illLibraries: {
     filters: [],
     sortBy: {
       onEmptyQuery: 'bestmatch',
@@ -459,7 +459,7 @@ const searchConfig = {
     },
     sortOrder: ['asc', 'desc'],
   },
-  borrowingRequests: {
+  illBorrowingRequests: {
     filters: [],
     sortBy: {
       onEmptyQuery: 'bestmatch',

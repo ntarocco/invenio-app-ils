@@ -1,8 +1,7 @@
 import { toShortDate } from '@api/date';
-import { CopyButton, SeriesAuthors } from '@components';
+import { CopyButton, CreatedBy, SeriesAuthors } from '@components';
 import { DocumentCover, DocumentTags } from '@components/Document';
 import { DetailsHeader, SeriesIcon } from '@pages/backoffice';
-import { DocumentCreatedBy } from '@pages/backoffice/Document/DocumentDetails/components';
 import { FrontSiteRoutes } from '@routes/urls';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -19,7 +18,7 @@ export class SeriesHeader extends Component {
           <>
             <br />
             <label className="muted">Created by</label>{' '}
-            <DocumentCreatedBy metadata={data.metadata} />
+            <CreatedBy metadata={data.metadata} />
           </>
         )}
         <br />

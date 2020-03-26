@@ -13,19 +13,16 @@ import {
   SearchBar as OrdersSearchBar,
   SearchControls,
 } from '@components';
-import { order as orderApi } from '@api';
+import { acqOrder as orderApi } from '@api';
 import { AcquisitionRoutes } from '@routes/urls';
-import {
-  OrderList,
-  ExportReactSearchKitResults,
-  NewButton,
-} from '../../../components';
+import { ExportReactSearchKitResults, NewButton } from '../../../components';
 import {
   SearchFooter,
   SearchEmptyResults,
   SearchAggregationsCards,
 } from '@components/SearchControls/components/';
 import history from '@history';
+import { OrderList } from './OrderList';
 
 class OrderResponseSerializer {
   serialize(results) {
@@ -122,7 +119,7 @@ export class OrderSearch extends Component {
                     </Grid>
                     <SearchEmptyResults extras={this.renderEmptyResultsExtra} />
                     <Error renderElement={this.renderError} />
-                    <SearchControls modelName={'orders'} />
+                    <SearchControls modelName={'acqOrders'} />
                     <ResultsList renderElement={this.renderOrderList} />
                     <SearchFooter />
                   </Grid.Column>

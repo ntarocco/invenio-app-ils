@@ -74,7 +74,7 @@ install_requires = [
     "Flask-BabelEx>=0.9.3",
     "Flask-Debugtoolbar>=0.10.1",
     "Flask-Login==0.4.1",
-    "invenio[base,auth]==3.2.0a9",
+    "invenio[base,auth]==3.2.1",
     # `metadata` bundle without records UI
     "invenio-indexer>=1.1.0,<1.2.0",
     "invenio-jsonschemas>=1.0.0,<1.1.0",
@@ -85,7 +85,7 @@ install_requires = [
     "invenio-files-rest>=1.0.6,<1.1.0",
     "invenio-app>=1.2.3,<1.3.0",
     "invenio-assets>=1.1.3,<1.2.0",
-    "invenio-i18n>=1.1.0,<1.2.0",
+    "invenio-i18n>=1.2.0,<1.4.0",
     "invenio-userprofiles>=1.0.1,<1.1.0",
     # extra
     "invenio-circulation>=1.0.0a21,<1.1.0",

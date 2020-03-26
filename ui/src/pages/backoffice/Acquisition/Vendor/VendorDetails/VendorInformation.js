@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { MetadataTable } from '@pages/backoffice';
-import { EmailLink, EmailCopyToClipboard } from '@components';
+import { EmailLink, CopyButton } from '@components';
 
 export class VendorInformation extends React.Component {
   render() {
@@ -13,7 +13,7 @@ export class VendorInformation extends React.Component {
         value: (
           <span>
             <EmailLink email={vendor.email} />{' '}
-            <EmailCopyToClipboard email={vendor.email} />
+            <CopyButton text={vendor.email} />
           </span>
         ),
       },

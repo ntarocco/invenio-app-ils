@@ -1,4 +1,4 @@
-import { EmailLink, EmailCopyToClipboard } from '@components';
+import { EmailLink, CopyButton } from '@components';
 import {
   SearchAggregationsCards,
   SearchControls,
@@ -78,7 +78,7 @@ export class PatronSearch extends Component {
     return (
       <>
         <EmailLink email={row.metadata.email} />{' '}
-        <EmailCopyToClipboard email={row.metadata.email} />
+        <CopyButton text={row.metadata.email} />
       </>
     );
   };

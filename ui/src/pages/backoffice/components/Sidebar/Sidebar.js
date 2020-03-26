@@ -136,17 +136,17 @@ class Sidebar extends Component {
             <Menu.Menu>
               <Menu.Item
                 as={Link}
+                active={borrowingRequestsActive}
+                to={ILLRoutes.borrowingRequestList}
+              >
+                Borrowing Requests
+              </Menu.Item>
+              <Menu.Item
+                as={Link}
                 active={librariesActive}
                 to={ILLRoutes.libraryList}
               >
                 Libraries
-              </Menu.Item>
-              <Menu.Item
-                as={Link}
-                active={borrowingRequestsActive}
-                to={ILLRoutes.borrowingRequestList}
-              >
-                New Borrowing Requests
               </Menu.Item>
             </Menu.Menu>
           </Menu.Item>
