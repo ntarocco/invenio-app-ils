@@ -212,10 +212,10 @@ def checkout_loan(
     )
 
     # check if there is an existing request
-    loan = patron_has_request_on_document(patron_pid, kwargs.get("document_pid"))
+    loan = patron_has_request_on_document(patron_pid, kwargs["document_pid"])
     if loan:
         loan = loan_cls.get_record_by_pid(loan.pid)
-        pid = IlsCirculationLoanIdProvider.get(loan["pid"]).pid
+        pid = IlsCirculationLoanIdProvider[loan["pid"]].pid
         loan.update(new_loan)
     else:
         pid = ils_circulation_loan_pid_minter(record_uuid, data=new_loan)
